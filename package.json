@@ -1,0 +1,26 @@
+{
+  "name": "blind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "injector.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node injector.js --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaryswastaken/blind.git"
+  },
+  "author": "Aarys Sahler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaryswastaken/blind/issues"
+  },
+  "homepage": "https://github.com/aaryswastaken/blind#readme",
+  "dependencies": {
+    "convert-layout": "^0.11.1",
+    "dotenv": "^16.0.3",
+    "puppeteer": "^19.2.2"
+  }
+}
