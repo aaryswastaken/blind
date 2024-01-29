@@ -19,8 +19,9 @@
   },
   "homepage": "https://github.com/aaryswastaken/blind#readme",
   "dependencies": {
+    "arg": "^5.0.2",
     "convert-layout": "^0.11.1",
     "dotenv": "^16.0.3",
-    "puppeteer": "^19.2.2"
+    "puppeteer": "^21.7.0"
   }
 }
