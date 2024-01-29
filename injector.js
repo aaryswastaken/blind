@@ -1,3 +1,8 @@
+/*
+ * This code is licensed under the MIT license
+ * (C) Aarys Sahler, 2024
+ */
+
 const DEBUG = process.argv.includes("--debug");
 const NOHL = process.argv.includes("no-headless");
 const TIMER = process.argv.includes("--short") ? 15000 : 45000;
@@ -153,7 +158,7 @@ async function type(keyboard, text, to) {
     for(const pl in PAYLOAD) {
         await type(page.keyboard, PAYLOAD[pl], 100)
 	await new Promise(r => setTimeout(r, 500))
-	
+
 	await page.keyboard.press('Enter')
         await new Promise(r => setTimeout(r, 5000))
     }

